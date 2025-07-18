@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Log In</title>
+     <%- include('head') %>
+
+</head>
+<body>
+     <header>
+         <%- include('header') %>
+     </header>
+     <main>
+         <div class="container mt-3 mb-5">
+             <div class="login-signup-container">
+                  <h1 class="login-signup-heading">Log In</h1>
+                  <form action="/login" method="POST" class="mt-5">
+                     <div class="row justify-content-center"> 
+                         <div class="col-lg-9 col-md-9 col-sm-12 col-12">
+                             <input type="text" placeholder="Username" name="username" class="library-input" value="<%= username %>"  required>
+
+                             <div class="position-relative">
+                                 <input type="password" placeholder="Password" name="password" class="library-input" value="<%= password %>" id="passwordInput"  required>
+                                  <i class="bi bi-eye-slash toggle-login-password" onclick="showPassword(this)"></i>
+                             </div>
+
+                             <p class="library-errors"><%= error %></p>
+                             <button type="submit" class="btn login-signup-button">Log In</button>
+
+                             <p class="library-text mt-3">New user? 
+                                 <a class="gallery-clickable-content log-in-sign-up" href="/signup">
+                                     SignUp
+                                 </a> 
+                             </p>
+                         </div>
+                     </div>
+                  </form>
+              </div>
+         </div>
+     </main>
+     <footer>
+         <%- include('footer') %>
+     </footer>
+
+     <%- include('foot') %>
+</body>
+</html>

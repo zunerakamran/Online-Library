@@ -1,0 +1,847 @@
+ 
+ .library-button{
+     padding: 11px 45px;
+     border-radius: 22px ;
+     background: #F58220;
+     color: #FFF;
+     font-family: Jost;
+     font-size: 16px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: normal;
+     text-transform: capitalize;
+ }
+ 
+ .library-button:hover{
+     background: #F58220;
+     color: #FFF;
+ }
+
+ .library-heading{
+     font-family: Jost;
+     font-size: 48px;
+     font-style: normal;
+     font-weight: 600;
+     line-height: normal;
+ }
+
+ .library-subheading{
+     color: #000;
+     font-family: Jost;
+     font-size: 24px;
+     font-style: normal;
+     font-weight: 700;
+     line-height: normal;
+ }
+
+ .library-text{
+     font-family: Outfit;
+     font-size: 16px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: normal;
+ } 
+
+ .library-input{
+     padding-left: 50px;
+     padding-right:10px;
+     border-radius: 22px;
+     background: #FFF;
+     border:none;
+     width: 100%;
+     height: 50px;
+     margin-bottom: 20px;
+ }
+
+ .library-comment{
+     padding-left: 50px;
+     padding-right:10px;
+     border-radius: 22px;
+     background: #E7E6E4;
+     border:none;
+     width: 100%;
+     height: 50px;
+     margin-bottom: 20px;
+ }
+
+ .library-textarea{
+     border-radius: 22px;
+     background: #FFF;
+     border:none;
+     width: 100%;
+     padding-bottom: 200px;
+     padding-top: 30px;
+     padding-left: 50px;
+     margin-bottom: 20px;
+ }
+
+ .library-input::placeholder, .libraray-textarea::placeholder{
+     color: black;
+     font-family: Jost;
+     font-size: 16px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: normal;
+     text-transform: capitalize;
+ }
+
+ .custom-file-input {
+     padding: 4px;
+     border-radius: 22px;
+     background: #FFF;
+     border:none;
+     width: 100%;
+     height: 50px;
+     margin-bottom: 20px;
+ }
+
+ .custom-file-input::file-selector-button {
+     padding: 10px 20px;
+     border-radius: 22px ;
+     background: #F58220;
+     color: #FFF;
+     font-family: Jost;
+     font-size: 16px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: normal;
+     text-transform: capitalize;
+     border: none;
+     cursor: pointer;
+ }
+
+ .custom-file-input::file-selector-button:hover {
+     background-color: #F58220;
+ }
+
+ .input-label{
+     font-family: Jost;
+     font-size: 19px;
+     font-style: normal;
+     font-weight: 500;
+     line-height: normal;
+     margin: 10px;
+ }
+
+ .select{
+     color: black;
+     font-family: Jost;
+     font-size: 16px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: normal;
+     text-transform: capitalize;
+ }
+
+ .library-errors{
+     margin:12px;
+     font-family:Outfit;
+     color:red;
+     font-size:16px
+}
+
+ /* navbar css */
+ .site-logo{
+     width: 150px;
+     height: 80px; 
+ }
+ .navbar-container{
+     display: flex;
+     justify-content: right;
+}
+ .navbar-subcontainer{
+     width: 120px;
+     color: #000;
+     font-family: Jost;
+     font-size: 16px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: normal;
+     text-transform: capitalize;
+     margin-top: 5px;
+ }
+
+ /* footer css */
+ .footer-container{
+     background-color: #1D1B1B;
+     border-radius: 16px;
+     width: 100%;
+     height: 100%;
+     padding: 50px;
+ }
+
+ .footer-heading{
+     font-family: Outfit;
+     font-weight: 400;
+     font-size: 24px;
+     color: white;
+ }
+
+ .footer-text{
+     font-family: Jost;
+     font-weight: 400;
+     font-size: 16px;
+     color: white;
+ }
+
+ .footer-list-container{
+     list-style: none;
+     color: white;
+     padding: 0px;
+     margin: 0px;
+     font-family: Jost;
+ }
+
+ .footer-list:hover{
+     color: #F58220;
+ }
+
+ /* home page css */
+ .hero-container{
+     background: linear-gradient(180deg, rgba(151, 170, 176, 0.80) 0%, 
+     rgba(157, 175, 181, 0.75) 39.44%, 
+     rgba(255, 255, 255, 0.00) 100%), 
+     url('images/hero.jpg');
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     height: 500px;
+     border-radius: 16px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .hero-section-container{
+     text-align: center;
+     padding: 150px;
+ }
+
+ .hero-section-heading{
+     color: black;
+     text-align: center;
+     font-family: Outfit;
+     font-size: 64px;
+     font-style: normal;
+     font-weight: 600;
+     line-height: normal;
+ }
+
+ .hero-section-text{
+     color: black;
+     text-align: center;
+     font-family: Jost;
+     font-size: 18px;
+     font-style: normal;
+     font-weight: 600;
+     line-height: normal;
+     margin-left: 140px;
+     margin-right: 140px;
+ }
+
+ .icon-container {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 100%;
+ }
+
+ .icon-heading {
+     flex: 1;
+ }
+
+ .icon-subcontainer {
+     text-align: right;
+ }
+
+ .gallery-clickable-content{
+     all: unset;
+     cursor: pointer;
+ }
+
+ .gallery-container{
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position:center;
+     width: 100%; 
+     height: 276px;
+     border-radius: 16px;
+     padding-bottom: 10px;
+     padding-left: 10px;
+     padding-right: 10px;
+     display: flex;
+     align-items:last baseline;
+ }
+
+ .gallery-black-small-box-subcontainer{
+     width: 258px;
+     height: 84px;
+     background-color: #1D1B1B;
+ }
+
+ .gallery-black-large-box-subcontainer{
+     width: 353px;
+     height: 84px;
+     background-color: #1D1B1B;
+ }
+
+ .fiction-container{
+     background-image: url('images/category1.jpg');
+ }
+
+ .children-container{
+     background-image: url('images/category2.jpg');
+ }
+
+ .history-container{
+     background-image: url('images/category3.jpg');
+ }
+
+ .all-container{
+     background-image: url('images/category6.jpg');
+ }
+
+ .biography-container{
+     background-image: url('images/category4.jpg');
+}
+
+ .art-container{
+     background-image: url('images/category5.jpg');
+ }
+
+ .gallery-heading{
+     color: #fff;
+     font-size: 24px;
+     font-family: Outfit;
+     font-weight: 400;
+ }
+
+ .gallery-text{
+     color: #FFF;
+     font-weight: 400;
+     font-family: Jost;
+     font-size: 16px;
+ }
+
+ .section3-images{
+     border-radius: 16px;
+     background: lightgray 50% / cover no-repeat;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     object-position: center;
+ }
+
+ .section-boxes{
+     height: 100%;
+     padding: 20px;
+     border-radius: 16px;
+     background: #E7E6E4;
+ }
+
+ .section-boxes:hover{
+     background: #FF914D;
+ }
+
+ .section-orange-boxes{
+     height: 100%;
+     padding: 20px;
+     border-radius: 16px;
+     background: #FF914D;
+ }
+
+ .section-1-ranking-heading {
+     font-family: 'Outfit', sans-serif;
+     font-size: 48px;
+     font-weight: 700;
+     color: #ff7e5f;
+     text-transform: capitalize;
+     letter-spacing: 1px;
+     transition: transform 0.3s ease;
+}
+
+ .section-1-ranking-heading:hover {
+     transform: scale(1.1); /* subtle zoom on hover */
+ }
+
+ .section-1-ranking-text {
+     font-family: 'Jost';
+     font-size: 20px;
+     font-weight: 600;
+     color: black;
+     text-transform: uppercase;
+     letter-spacing: 0.5px;
+     margin-top: 5px;
+ }
+
+
+ .testimonial-container{
+     width: 100%;
+     height: 100%;
+     flex-shrink: 0;
+     background: #E7E6E4;
+ }
+
+ .testimonial-viewport {
+     overflow: hidden;
+     position: relative;
+     height: 100%;
+     width: 100%;
+ }
+
+ .testimonial-track {
+     display: flex;
+     transition: transform 1s ease-in-out;
+ }
+
+ .testimonial-indicator{
+     position: absolute;
+     right: 80px;
+     bottom: 20px;
+     display: flex;
+     gap: 10px;
+ }
+
+ .testimonial-box {
+     flex: 0 0 100%;      
+     padding: 40px 0px 40px 0px;
+ }
+
+ .testimonial-indicator button{
+     width: 10px;
+     height: 12px;
+     border-radius: 50%;
+     background-color: black;
+     border: none;
+ }
+
+ .testimonial-indicator button.active{
+     background-color: #ff914d;
+ }
+
+ .outer-circle {
+     width: 192px;
+     height: 192px;
+     border-radius: 50%;
+     border: 1px solid black;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.inner-image {
+     width: 159px;
+     height: 159px;
+     border-radius: 50%;
+     background-size: cover;
+     background-position: center;
+ }
+ 
+ .testimonial-inner-image1{
+     background-image: url('./images/testimonial1.jpg');
+ }
+
+ .testimonial-inner-image2{
+     background-image: url('./images/testimonial2.jpg');
+ }
+
+ .testimonial-inner-image3{
+     background-image: url('./images/testimonial3.jpg');
+ }
+
+ .testimonial-inner-image4{
+     background-image: url('./images/testimonial4.jpg');
+ }
+
+ .testimonial-text{
+     color: #000;
+     font-family: Jost;
+     font-size: 16px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: normal;
+ }
+
+ .testimonial-name{
+     color: #000;
+     font-family: Outfit;
+     font-size: 24px;
+     font-style: normal;
+     font-weight: 700;
+     line-height: normal;
+ }
+
+ .testimonial-subcontainer{
+     margin-top: 10px;
+     margin-left: 25px;
+ }
+
+ /* categories page css */
+ .books-images{
+     width: 100%;
+     height: 265px;
+     object-fit: cover;
+     object-position: center;
+     border-radius: 16px;
+ }
+
+ .book-card, .gallery-images{
+     transition: transform 0.3s ease;
+ }
+ .book-card:hover, .gallery-images:hover{
+     transform: scale(1.1); /* subtle zoom on hover */
+ }
+
+ .books-title{
+     font-family: Jost;
+     color: #F58220;
+     margin: 0px;
+     font-size:26px;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+ }
+
+ .books-author{
+     font-family: Outfit;
+     margin: 0px;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+ }
+
+ .books-detail-hero{
+     width: 100%;
+     height: 500px;
+     background-image:url('images/fiction/book1.jpg');
+     background-size: cover;
+     background-position: center;
+     border-radius: 16px;
+ }
+
+ .books-detail-hero-container{
+     width: 100%; 
+     height: 100%;
+     border-radius: 16px;
+     background-color: rgba(245, 130, 32, 0.7);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .books-detail-hero-heading{
+     font-size: 48px;
+     font-family: Jost;
+     color: black;
+ }
+
+ .books-detail-hero-text{
+     text-align: center;
+     font-family: Outfit;
+     font-size: 20px;
+ }
+
+ .books-details-image{
+     width: 100%;
+     height: 500px;
+     object-fit: cover;
+     object-position: center;
+     border-radius:16px;
+    
+ }
+
+ .books-detail-text{
+     font-family: Outfit;
+     font-size: 18px;
+     line-height: 38px;
+ }
+
+ .categories-hero-section{
+     height:500px;
+     border-radius:16px;
+     display:flex;
+     justify-content:center;
+     align-items:center;
+ }
+
+ .category-fiction-image{
+     background: linear-gradient(180deg, rgba(151, 170, 176, 0.60) 0%, 
+     rgba(157, 175, 181, 0.55) 39.44%, 
+     rgba(255, 255, 255, 0.00) 100%), 
+     url('images/category1.jpg');
+ }
+
+ .category-children-image{
+     background: linear-gradient(180deg, rgba(151, 170, 176, 0.60) 0%, 
+     rgba(157, 175, 181, 0.55) 39.44%, 
+     rgba(255, 255, 255, 0.00) 100%), 
+     url('images/category2.jpg');
+ }
+
+ .category-history-image{
+     background: linear-gradient(180deg, rgba(151, 170, 176, 0.60) 0%, 
+     rgba(157, 175, 181, 0.55) 39.44%, 
+     rgba(255, 255, 255, 0.00) 100%), 
+     url('images/category3.jpg');
+ }
+
+ .category-biography-image{
+     background: linear-gradient(180deg, rgba(151, 170, 176, 0.60) 0%, 
+     rgba(157, 175, 181, 0.55) 39.44%, 
+     rgba(255, 255, 255, 0.00) 100%), 
+     url('images/category4.jpg');
+     background-repeat: no-repeat;
+     background-size: cover;
+ }
+
+ .category-arts-image{
+     background: linear-gradient(180deg, rgba(151, 170, 176, 0.60) 0%, 
+     rgba(157, 175, 181, 0.55) 39.44%, 
+     rgba(255, 255, 255, 0.00) 100%), 
+     url('images/category5.jpg');
+ }
+
+ .category-all-image{
+     background: linear-gradient(180deg, rgba(151, 170, 176, 0.60) 0%, 
+     rgba(157, 175, 181, 0.55) 39.44%, 
+     rgba(255, 255, 255, 0.00) 100%), 
+     url('images/category6.jpg');
+ }
+
+/* Log in and sign up styling */
+ .login-signup-container{
+     border-radius: 16px;
+     background: #E7E6E4;
+     padding: 80px;
+ }
+
+ .login-signup-heading{
+     color: #1D1B1B;
+     text-align: center;
+     font-family: Outfit;
+     font-size: 48px;
+     font-style: normal;
+     font-weight: 600;
+     line-height: normal;
+     text-transform: capitalize;
+ }
+
+ .login-signup-button{
+     margin-top: 20px;
+     width: 100%;
+     border-radius: 22px;
+     background: #F58220;
+     height: 50px;
+     color:white
+ }
+
+ .login-signup-button:hover{
+     background: #F58220;
+     color:white;
+ }
+
+ .log-in-sign-up{
+     color: #F58220;
+     text-decoration:underline;
+ }
+
+ .position-relative {
+     position: relative;
+ }
+
+ .toggle-login-password {
+     position: absolute;
+     right: 20px;
+     top: 30%;
+     transform: translateY(-35%);
+     cursor: pointer;
+     color: #aaa;
+     user-select: none;
+ }
+ .toggle-signup-password{
+     position: absolute;
+     right: 15px;
+     top: 35%;
+     transform: translateY(-50%);
+     cursor: pointer;
+     color: #aaa;
+     user-select: none;
+ }
+
+ .toggle-login-password:hover, .toggle-signup-password:hover {
+     color: #333;
+ }
+
+ /* add book styling */
+ .add-book-image{
+     border-radius: 16px;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     object-position: center;
+ }
+
+ .add-book-container{
+     height: 100%;
+     width: 100%;
+     border-radius: 16px;
+     background-color: #E7E6E4;
+ }
+
+ .add-book-sub-container{
+     padding: 30px;
+ }
+
+/* confirmation modal */
+ .modal {
+     position: fixed;
+     top: 0; left: 0; right: 0; bottom: 0;
+     background-color: rgba(0,0,0,0.5);
+     z-index: 999;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     display: flex;
+ }
+
+ .modal-content {
+     background: white;
+     padding: 30px;
+     border-radius: 10px;
+     height: 200px;
+     width: 300px;
+     justify-content: center;
+}
+
+ .modals-button{
+     margin-top: 10px;
+     text-align: right;
+ }
+
+/* Search Bar */
+ .search-container{
+     display: flex;
+     justify-content: flex-end;
+ }
+
+ .search-input{
+     padding-left: 50px;
+     border-radius: 15px;
+     border: 1px solid #ccc;
+     width: 100%;
+     height: 50px;
+     margin-bottom: 20px;
+     background-color: #f0f0f0;
+ }
+
+ /* mybooks page */
+ .mybooks-container{
+     background: linear-gradient(180deg, rgba(151, 170, 176, 0.80) 0%, 
+     rgba(157, 175, 181, 0.75) 39.44%, 
+     rgba(255, 255, 255, 0.00) 100%), 
+     url('images/my-books.jpg');
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     height: 500px;
+     border-radius: 16px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ /* pending books */
+ .pendingbooks-container{
+     background: linear-gradient(180deg, rgba(151, 170, 176, 0.80) 0%, 
+     rgba(157, 175, 181, 0.75) 39.44%, 
+     rgba(255, 255, 255, 0.00) 100%), 
+     url('images/pending-books.jpg');
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     height: 500px;
+     border-radius: 16px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .verifiedbooks-container{
+     background: linear-gradient(180deg, rgba(151, 170, 176, 0.80) 0%, 
+     rgba(157, 175, 181, 0.75) 39.44%, 
+     rgba(255, 255, 255, 0.00) 100%), 
+     url('images/verified-books.jpg');
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     height: 500px;
+     border-radius: 16px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+
+ @media (max-width: 1024px) {
+     .hero-section {
+         height: auto;
+         padding: 50px 20px;
+     }
+
+     .hero-section-container {
+         padding: 80px 40px;
+     }
+
+     .hero-section-heading {
+         font-size: 48px; 
+     }
+
+     .hero-section-text {
+         font-size: 14px; 
+         margin: 0 30px;
+     }
+ }
+
+ @media (max-width: 768px) {
+     .hero-section {
+         width: 100%;
+         padding: 40px 20px;
+     }
+
+     .hero-section-container {
+         padding: 60px 20px;
+     }
+
+     .hero-section-heading {
+         font-size: 36px;
+     }
+
+     .hero-section-text {
+         font-size: 14px;
+         margin: 0 auto;
+         max-width: 90%;
+     }
+
+     .book-card:hover, .gallery-images:hover{
+         transform: scale(1.0);
+     }
+ }
+
+ @media (max-width: 480px) {
+     .hero-section {
+         padding: 30px 15px;
+     }
+
+     .hero-section-container {
+         padding: 40px 10px;
+     }
+
+     .hero-section-heading {
+         font-size: 28px;
+    }
+
+     .hero-section-text {
+         font-size: 13px;
+     }  
+
+ }

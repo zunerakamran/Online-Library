@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Book</title>
+    <%- include('head') %>
+</head>
+<body>
+     <header>
+         <%- include('header') %>
+     </header>
+     <main>
+          <div class="container mb-5">
+             <div class="row add-book-container g-0 mt-5">
+                 <div class="col-lg-6 col-md-6 col-sm-12 add-book-sub-container">
+                     <form action="/my-books/update/<%- bookid %>" id="updateBook" method="POST" enctype="multipart/form-data">
+                         <div class="row justify-content-center">
+                             <button type="button" class="btn btn-primary" onclick="displayImageFileUploader()">
+                                 Update Image
+                             </button>
+
+                             <div class="col-lg-12 col-md-12 col-sm-12 col-12" id="imageUploader" style="display: none;">
+                                 <label for="image" class="input-label">
+                                     Choose Your Book Image File
+                                 </label>
+                                 <input 
+                                     type="file" 
+                                     accept="image/*" 
+                                     class="custom-file-input" 
+                                     name="image">
+                             </div>
+
+                             <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                 <label for="title" class="input-label">
+                                     Update Your Book Title
+                                 </label>
+                                 <input 
+                                     type="text" 
+                                     placeholder="Title" 
+                                     name="title" 
+                                     class="library-input" 
+                                     value="<%- book.title %>" 
+                                     pattern="^[A-Za-z0-9\s\-:,.!?()]{2,100}$" 
+                                     title="Title should be 2-100 characters and contain only letters, numbers, spaces, and common punctuation."
+                                     required>
+                             </div>
+
+                             <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                 <label for="category" class="input-label">
+                                     Update Book Category
+                                 </label>
+                                 <select name="category" class="library-input"  required>
+                                     <option value="Fiction" <%= book.category === 'Fiction' ? 'selected' : ''%> >
+                                         Fiction
+                                     </option>
+                                     <option value="Children" <%= book.category === 'Children' ? 'selected' : ''%>>
+                                         Children
+                                     </option>
+                                     <option value="History" <%= book.category === 'History' ? 'selected' : ''%>>
+                                         History
+                                     </option>
+                                     <option value="Biography" <%= book.category === 'Biography' ? 'selected' : ''%>>
+                                         Biography
+                                     </option>
+                                     <option value="Arts" <%= book.category === 'Arts' ? 'selected' : ''%>>
+                                         Arts
+                                     </option>
+                                 </select>
+                             </div>
+                                 
+                             <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                 <label for="author" class="input-label">
+                                     Update Your Book Author
+                                 </label>
+                                 <input 
+                                     type="text" 
+                                     placeholder="Author" 
+                                     name="author" 
+                                     class="library-input" 
+                                     value="<%- book.author %>" 
+                                     pattern="^[A-Za-z\s.'-]{2,50}$" 
+                                     title="Author name should be 2–50 characters and contain only letters, spaces, and common name punctuation (like . or -)." 
+                                     required>
+                             </div>
+
+                             <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                 <label for="narrator" class="input-label">
+                                     Update Your Book Narrator
+                                 </label>
+                                 <input 
+                                     type="text" 
+                                     placeholder="Narrator" 
+                                     name="narrator" 
+                                     class="library-input" 
+                                     value="<%- book.narrator %>" 
+                                     pattern="^[A-Za-z\s.'-]{2,50}$" 
+                                     title="Narrator name should be 2–50 characters and contain only letters, spaces, and common name punctuation (like . or -)." 
+                                     required>
+                             </div>
+
+                             <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                 <label for="publisher" class="input-label">
+                                     Update Your Book Publisher
+                                 </label>
+                                 <input 
+                                     type="text" 
+                                     placeholder="Publisher" 
+                                     name="publisher" 
+                                     class="library-input" 
+                                     value="<%- book.publisher %>" 
+                                     pattern="^[A-Za-z\s.'-]{2,50}$" 
+                                     title="Publisher name should be 2–50 characters and contain only letters, spaces, and common name punctuation (like . or -)." 
+                                     required>
+                             </div>
+
+                             <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                 <label for="releasedYear" class="input-label">
+                                     Update Your Book Released Year
+                                 </label>
+                                 <input 
+                                     type="number" 
+                                     min="1000" 
+                                     max="2025" 
+                                     placeholder="Released Year" 
+                                     name="releasedYear" 
+                                     class="library-input" 
+                                     value="<%- book.releasedYear %>"  
+                                     required>
+                             </div>
+
+                             <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                 <label for="releasedDate" class="input-label">
+                                     Update Your Released Date
+                                 </label>
+                                 <input 
+                                     type="date" 
+                                     placeholder="Released Date" 
+                                     name="releasedDate" 
+                                     class="library-input" 
+                                     value="<%- book.releasedDate %>" 
+                                     max="<%= new Date().toISOString().split('T')[0] %>" 
+                                     required>
+                             </div>
+
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                 <label for="details" class="input-label">
+                                     Update Your Book Details
+                                 </label>
+                                 <textarea 
+                                     type="text" 
+                                     placeholder="Details" 
+                                     name="details" 
+                                     class="library-textarea" 
+                                     minlength="20" 
+                                     pattern="^[\w\s.,!?()'\"-]{10,}$"
+                                     title="Details must be 20-1000 characters and can include letters, numbers, and punctuation."
+                                     required><%- book.details %></textarea>
+                             </div>
+
+                             <button type="button" class="btn btn-primary" onclick="displayDownloadFileUploader()">
+                                 Update Download File
+                             </button>
+
+                             <div class="col-lg-12 col-md-12 col-sm-12 col-12" id="downloadUploader" style="display: none;">
+                                 <label for="download" class="input-label">
+                                     Choose Your Book Pdf File
+                                 </label>
+                                 <input 
+                                     type="file" 
+                                     accept="application/pdf" 
+                                     class="custom-file-input" 
+                                     name="download">
+                             </div>
+
+                             <% errors.forEach(error => { %>
+                                 <p class="library-errors"><%-error %></p>
+                             <% }) %>
+
+                             <div class="col-lg-12 col-md-12 col-sm-12 col-12 mt-4">
+                                 <button type="submit" class="btn library-button">
+                                     Update
+                                 </button>
+                             </div> 
+                             
+                         </div>
+                     </form>
+                 </div>
+
+                 <div class="col-lg-6 col-md-6 col-sm-12">
+                     <img src="/images/update.jpg" alt="" class="add-book-image">
+                 </div>
+             </div>
+         </div>
+     </main>
+     <footer>
+         <%- include('footer') %>
+     </footer>
+
+     <%- include('foot') %>
+</body>
+</html>

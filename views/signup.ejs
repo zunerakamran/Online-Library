@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Sign Up</title>
+     <%- include('head') %>
+</head>
+<body>
+     <header>
+         <%- include('header') %>
+     </header>
+     <main>
+         <div class="container mt-3 mb-5">
+             <div class="login-signup-container">
+                  <h1 class="login-signup-heading">Sign Up</h1>
+                  <form action="/signup" method="POST" id="signupForm" class="mt-5">
+                     <div class="row justify-content-center"> 
+                         <div class="col-lg-9 col-md-9 col-sm-12 col-12">
+                             
+                             <input 
+                                 type="text" 
+                                 placeholder="Full Name" 
+                                 name="fullname" 
+                                 class="library-input" 
+                                 pattern="^[A-Za-z\s]{2,40}$" 
+                                 title="Full name should be 2-40 characters and contain only letters and spaces."
+                                 required>
+
+                             <input 
+                                 type="text" 
+                                 placeholder="Username" 
+                                 name="username" 
+                                 class="library-input" 
+                                 minlength="8" 
+                                 maxlength="20"
+                                 pattern="^[a-zA-Z0-9_]{8,20}$"
+                                 title="Username should be 8-20 characters long and contain only letters, numbers, and underscores."
+                                 required>
+
+                             <input 
+                                 type="email" 
+                                 placeholder="Email" 
+                                 name="email" 
+                                 class="library-input" 
+                                 required 
+                                 pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                                 title="Please enter a valid email address (e.g., example@domain.com)">
+
+                             <div class="position-relative">
+                                 <input 
+                                     type="password" 
+                                     placeholder="Password (Strong)" 
+                                     name="password" 
+                                     id="passwordInput" 
+                                     class="library-input" 
+                                     minlength="8"
+                                     pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                                     title="Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one digit, and one special character."
+                                     required>
+
+                                 <i class="bi bi-eye-slash toggle-signup-password" onclick="showPassword(this)"></i>
+                             </div>
+
+                             <% errors.forEach(error => { %>
+                                 <p class="library-errors"><%-error %></p>
+                             <% }) %>
+                             <button type="submit" class="btn login-signup-button">Sign Up</button>
+
+                         </div>
+                     </div>
+                     </div>
+                  </form>
+              </div>
+         </div>
+     </main>
+     <footer>
+         <%- include('footer') %>
+     </footer>
+
+     <%- include('foot') %>
+</body>
+</html>

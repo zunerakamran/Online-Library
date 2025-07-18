@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Category - <%-category %></title>
+     <%- include('head') %>
+
+</head>
+<body>
+     <header>
+          <%- include('header') %>
+     </header>
+     <main>
+         <div class="container-fluid">
+             <div class="categories-hero-section  category-<%- category %>-image">
+                 <div class="hero-section-container">
+                     <h1 class="hero-section-heading mt-3 text-capitalize">
+                         <%- category %> 
+                     </h1>
+                     <p class="hero-section-text mt-3">
+                         Discover a world of knowledge, imagination, and inspiration. Browse through our diverse range of categories—each carefully curated to fuel your curiosity and ignite your passion for reading.
+                     </p>
+                     <a class="gallery-clickable-content" href="#booksContainer">
+                         <button class="btn library-button mt-3">Explore Now</button>
+                     </a>
+                 </div>
+             </div>
+         </div>
+         <div class="container mt-5 mb-5" id="booksContainer">
+             <div class="search-container">
+                 <input type="text" id="searchInput" class="search-input" placeholder="Search Book By Title" oninput="searchBooks()">
+             </div>
+             <h1 class="library-heading text-center mb-4">Browse Our Book Categories</h1>
+             <div class="row justify-content-center">
+                 <% books.forEach(book => { %>
+                     <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-5 book-card">
+                         <a href="/books/<%- book.id %>" class="gallery-clickable-content">
+                             <img src="<%- book.image %>" alt="" class="books-images">
+                             <div class="mt-2">
+                                 <h4 class="books-title"> <%- book.title %> </h4>
+                                 <p class="books-author"> <%- book.author %> <br> 
+                                  (<%- book.releasedYear %>)</p>
+                             </div>
+                         </a>
+                 </div>  
+                 <% }) %>
+             </div>
+             <div id="pagination" class="mt-4 text-center"></div>
+         </div>
+     </main>
+     <footer>   
+          <%- include('footer') %>
+     </footer>
+
+     <%- include('foot') %>
+</body>
+</html>

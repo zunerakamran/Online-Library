@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
+    <%- include('head') %>
+</head>
+<body>
+     <header>
+         <%- include('header') %>
+     </header>
+     <main>
+          <div class="container mb-5">
+             <div class="row add-book-container g-0 mt-5">
+                 <div class="col-lg-6 col-md-6 col-sm-12">
+                     <img src="/images/add-book.jpg" alt="" class="add-book-image">
+                 </div>
+
+                 <div class="col-lg-6 col-md-6 col-sm-12 add-book-sub-container">
+                     <form action="/add-book" method="POST" id="addBook" enctype="multipart/form-data">
+                         <div class="row justify-content-center"> 
+                             <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                 <label for="image" class="input-label">
+                                     Choose Your Book Image
+                                 </label>
+                                 <input 
+                                     type="file" 
+                                     accept="image/*" 
+                                     class="custom-file-input" 
+                                     name="image" 
+                                     required>
+                             </div>
+
+                             <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                 <label for="title" class="input-label">
+                                     Enter Your Book Title
+                                 </label>
+                                 <input 
+                                     type="text" 
+                                     placeholder="Title" 
+                                     name="title" 
+                                     class="library-input" 
+                                     pattern="^[A-Za-z0-9\s\-:,.!?()]{2,100}$" 
+                                     title="Title should be 2-100 characters and contain only letters, numbers, spaces, and common punctuation." 
+                                     required>
+                             </div>
+
+                             <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                 <label for="category" class="input-label">
+                                     Select Book Category
+                                 </label>
+                                 <select name="category" class="library-input" required>
+                                     <option value="" disabled selected>Select</option>
+                                     <option value="Fiction">Fiction</option>
+                                     <option value="Children">Children</option>
+                                     <option value="History">History</option>
+                                     <option value="Biography">Biography</option>
+                                     <option value="Arts">Arts</option>
+                                 </select>
+                             </div>
+                                 
+                             <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                 <label for="author" class="input-label">
+                                     Enter Your Book Author
+                                 </label>
+                                 <input 
+                                     type="text" 
+                                     placeholder="Author" 
+                                     name="author" 
+                                     class="library-input" 
+                                     pattern="^[A-Za-z\s.'-]{2,50}$" 
+                                     title="Author name should be 2–50 characters and contain only letters, spaces, and common name punctuation (like . or -)." 
+                                     required>
+                             </div>
+
+                             <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                 <label for="narrator" class="input-label">
+                                     Enter Your Book Narrator
+                                 </label>
+                                 <input 
+                                     type="text" 
+                                     placeholder="Narrator" 
+                                     name="narrator" 
+                                     class="library-input" 
+                                     pattern="^[A-Za-z\s.'-]{2,50}$" 
+                                     title="Narrator name should be 2–50 characters and contain only letters, spaces, and common name punctuation (like . or -)." 
+                                     required>
+                             </div>
+
+                             <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                 <label for="publisher" class="input-label">
+                                     Enter Your Book Publisher
+                                 </label>
+                                 <input 
+                                     type="text" 
+                                     placeholder="Publisher" 
+                                     name="publisher" 
+                                     class="library-input" 
+                                     pattern="^[A-Za-z\s.'-]{2,50}$" 
+                                     title="Publisher name should be 2–50 characters and contain only letters, spaces, and common name punctuation (like . or -)." 
+                                     required>
+                             </div>
+
+                             <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                 <label for="releasedYear" class="input-label">
+                                     Enter Your Book Released Year
+                                 </label>
+                                 <input 
+                                     type="number" 
+                                     min="1000" 
+                                     max="2025" 
+                                     placeholder="Released Year" 
+                                     name="releasedYear"
+                                     class="library-input" 
+                                     required>
+                             </div>
+
+                             <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                 <label for="releasedDate" class="input-label">
+                                     Enter Your Released Date
+                                 </label>
+                                 <input 
+                                     type="date" 
+                                     name="releasedDate" 
+                                     class="library-input" 
+                                     max="<%= new Date().toISOString().split('T')[0] %>" 
+                                     required>
+                             </div>
+
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                 <label for="details" class="input-label">
+                                     Enter Your Book Details
+                                 </label>
+                                 <textarea 
+                                     placeholder="Details" 
+                                     name="details" 
+                                     class="library-textarea" 
+                                     required 
+                                     minlength="20" 
+                                     pattern="^[\w\s.,!?()'\"-]{10,}$"
+                                     title="Details must be 20-1000 characters and can include letters, numbers, and punctuation."></textarea>
+                             </div>
+
+                             <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                 <label for="download" class="input-label">
+                                     Choose Your Book Pdf File
+                                 </label>
+                                 <input 
+                                     type="file" 
+                                     accept="application/pdf" 
+                                     class="custom-file-input" 
+                                     name="download"
+                                     required>
+                             </div>
+                             
+                             <% errors.forEach(error => { %>
+                                 <p class="library-errors"><%-error %></p>
+                             <% }) %>
+
+                             <div class="col-lg-12 col-md-12 col-sm-12 col-12 mt-4">
+                                 <button type="submit" class="btn library-button">ADD</button>
+                             </div>   
+                         </div>
+                     </form>
+                 </div>
+             </div>
+         </div>
+     </main>
+     <footer>
+         <%- include('footer') %>
+     </footer>
+
+     <%- include('foot') %>
+</body>
+</html>

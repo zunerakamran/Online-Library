@@ -1,0 +1,22 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Confirmation</title>
+     <%- include('head') %>
+ </head>
+ <body>
+     <div id="confirmationModal" class="modal" style="display: none;">
+         <div class="modal-content">
+             <p id="modal-message" class="library-text">Do you want to delete memories?</p>
+             <div class="modal-actions modals-button">
+                 <button id="confirmBtn" class="btn btn-danger">Yes</button>
+                 <button onclick="closeModal()" class="btn btn-secondary">Cancel</button>
+             </div>
+         </div>
+     </div>
+   
+     <%- include('foot') %>
+ </body>
+ </html>

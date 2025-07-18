@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pending Books</title>
+    <%- include('head') %>
+</head>
+<body>
+     <header>
+         <%- include('header') %>
+     </header>
+     <main>
+          <div class="container-fluid">
+             <div class="pendingbooks-container">
+                 <div class="hero-section-container">
+                     <h1 class="hero-section-heading mt-3 text-capitalize">
+                         pending Books
+                     </h1>
+                     <p class="hero-section-text mt-3">
+                         Discover a world of knowledge, imagination, and inspiration. Browse through our diverse range of categories—each carefully curated to fuel your curiosity and ignite your passion for reading.
+                     </p>
+                     <a class="btn library-button mt-3" href="#pendingContainer">
+                         Explore Now
+                     </a>
+                 </div>
+             </div>
+         </div>
+         <div class="container mt-5 mb-5" id="pendingContainer">
+             <% if (pending_books.length !== 0) { %>
+                 <div class="search-container">
+                     <input type="text" id="searchInput" class="search-input" placeholder="Search Book By Title" oninput="searchBooks()">
+                 </div>
+                 <div class="row justify-content-center mt-4">
+                     <% pending_books.forEach(book => { %>
+                     <div class="col-lg-3 col-md-6 col-sm-8 col-8 mt-4 book-card">
+                         <div class="card">
+                             <img src="<%- book.image %>" class="card-img-top" height="320px" alt="">
+                             <div class="card-body">
+                                 <h5 class="card-title books-title" >
+                                     <%- book.title %>
+                                 </h5>
+                                 <p class="card-text books-author">
+                                     <%- book.author %>
+                                 </p>
+                                 <a href="/books/<%- book.id %>" class="btn btn-info mt-4">
+                                     View
+                                 </a>
+                                 <a class="btn btn-danger mt-4" onclick="
+                                 showModal(
+                                     'Do you really want to delete?',
+                                     ()=>{
+                                         window.location.href='/my-books/delete/<%- book.id %>'},
+                                     'btn-danger'
+                                 )">
+                                     Delete
+                                 </a>
+                                 <% if (username === 'admin') { %>
+                                     <a class="btn btn-success mt-4" onclick="
+                                     showModal(
+                                         'Do you really want to verify it?',
+                                         ()=>{
+                                             window.location.href='/my-books/verify/<%- book.id%>'},
+                                         'btn-success'
+                                     )">
+                                         Verify
+                                     </a>
+                                 <% } %>
+                             </div>
+                         </div>
+                     </div>
+                 <% }) %>
+             </div>
+             <div id="pagination" class="mt-4 text-center"></div>
+             <% } else{ %>
+                 <h1 class="library-heading text-center mb-4">No pending books to show </h1>
+             <% } %>
+         </div>
+     </main>
+     <footer>
+         <%- include('footer') %>
+     </footer>
+     <%- include('foot') %>
+</body>
+</html>

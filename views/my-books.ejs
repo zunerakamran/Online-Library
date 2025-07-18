@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Books</title>
+    <%- include('head') %>
+</head>
+<body>
+     <header>
+         <%- include('header') %>
+     </header>
+     <main>
+         <div class="container-fluid">
+             <div class="mybooks-container">
+                 <div class="hero-section-container">
+                     <h1 class="hero-section-heading mt-3 text-capitalize">
+                         My Books
+                     </h1>
+                     <p class="hero-section-text mt-3">
+                         Discover a world of knowledge, imagination, and inspiration. Browse through our diverse range of categories—each carefully curated to fuel your curiosity and ignite your passion for reading.
+                     </p>
+                     <a class="btn library-button mt-3" href="#booksContainer">
+                         Explore Now
+                     </a>
+                 </div>
+             </div>
+         </div>
+         <div class="container mt-5 mb-5" id="booksContainer">
+             <% if (mybooks.length !== 0) { %>
+                 <div class="search-container">
+                     <input type="text" id="searchInput" class="search-input" placeholder="Search Book By Title" oninput="searchBooks()">
+                 </div>
+                 <div class="row justify-content-center mt-4">
+                     <% mybooks.forEach(mybook => { %>
+                         <div class="col-lg-3 col-md-6 col-sm-8 col-8 mt-4 book-card">
+                             <div class="card">
+                                 <img src="<%- mybook.image %>" class="card-img-top" height="320px" alt="">
+                                 <div class="card-body">
+                                     <h5 class="books-title" >
+                                         <%- mybook.title %>
+                                     </h5>
+                                     <p class="books-author">
+                                         <%- mybook.author %>
+                                     </p>
+                                     <a href="/books/<%- mybook.id %>" class="btn btn-success mt-4">
+                                         View
+                                     </a>
+                                     <% if (username === 'admin') { %>
+                                         <a href="/my-books/update/<%- mybook.id %>" class="btn btn-primary mt-4">
+                                             Update
+                                         </a>
+                                         <a class="btn btn-danger mt-4" onclick="
+                                             showModal(
+                                                 'Do you really want to delete?',
+                                                 ()=>{
+                                                     window.location.href='/my-books/delete/<%- mybook.id %>'},
+                                                 'btn-danger'
+                                             )">
+                                             Delete
+                                         </a>
+                                     <% } %>
+                                 </div>
+                             </div>
+                         </div>
+                     <% }) %>
+                 <div>
+                 <div id="pagination" class="mt-4 text-center"></div>
+             <% } else { %>
+                 <h1 class="library-heading text-center mb-4">No books to show </h1>
+             <% } %>
+         </div>
+     </main>
+     <footer>
+         <%- include('footer') %>
+     </footer>
+
+     <%- include('foot') %>
+
+</body>
+</html>

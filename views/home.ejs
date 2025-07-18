@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Online Library</title>
+     <%- include('head') %>
+</head>
+<body>
+     <header>
+         <%- include('header') %>
+     </header>
+     <main>
+         <div class="container-fluid">
+             <div class="hero-container">
+                 <div class="hero-section-container">
+                     <h1 class="hero-section-heading mt-3">Discover Your Next Great Read with Expert Curation</h1>
+                     <p class="hero-section-text mt-3">At Naredko, we build professional digital platforms for book lovers and researchers, making it easy to explore, access, and enjoy a world of knowledge at your fingertips.</p>
+                     <a href="#homeContainer" class="btn library-button mt-3">Explore Now</a>
+                 </div>
+             </div>
+         </div>
+         <div class="container mt-5" id="homeContainer">
+             <!-- category section -->
+             <h1 class="library-heading text-center mt-5 mb-3">
+                 Discover a world of knowledge
+             </h1>
+             <div class="row pb-3">
+                 <div class="col-lg-3 col-md-6 col-sm-6 mt-3">
+                     <a href="/categories/fiction" class="gallery-clickable-content">
+                         <div class="gallery-container fiction-container">
+                             <div class="gallery-black-small-box-subcontainer px-4 py-2">
+                                 <div class="icon-container ">
+                                     <div class="icon-heading">
+                                         <h1 class="gallery-heading">Fiction</h1>
+                                     </div>
+                                     <div class="icon-subcontainer">
+                                         <img src="images/arrow.png" alt="">
+                                     </div>
+                                 </div>
+                                 <div class="mt-1">
+                                     <p class="gallery-text">Books Available: 250+</p>
+                                 </div>
+                             </div>    
+                         </div>
+                     </a>
+                 </div>
+                 <div class="col-lg-3 col-md-6 col-sm-6 mt-3">
+                     <a href="/categories/children" class="gallery-clickable-content">
+                         <div class="gallery-container children-container">
+                             <div class="gallery-black-small-box-subcontainer px-4 py-2">
+                                 <div class="icon-container ">
+                                     <div class="icon-heading">
+                                         <h1 class="gallery-heading">Children</h1>
+                                     </div>
+                                     <div class="icon-subcontainer">
+                                         <img src="images/arrow.png" alt="">
+                                     </div>
+                                 </div>
+                                 <div class="mt-1">
+                                     <p class="gallery-text">Books Available: 180+</p>
+                                 </div>
+                             </div>
+                         </div>
+                     </a>
+                 </div>
+                 <div class="col-lg-6 col-md-6 col-sm-6 mt-3">
+                     <a href="/categories/history" class="gallery-clickable-content">
+                         <div class="gallery-container history-container">
+                             <div class="gallery-black-large-box-subcontainer px-4 py-2">
+                                 <div class="icon-container ">
+                                     <div class="icon-heading">
+                                         <h1 class="gallery-heading">History</h1>
+                                     </div>
+                                     <div class="icon-subcontainer">
+                                         <img src="images/arrow.png" alt="">
+                                     </div>
+                                 </div>
+                                 <div class="mt-1">
+                                     <p class="gallery-text">Books Available : 145+</p>
+                                 </div>
+                             </div>
+                         </div>
+                     </a>
+                 </div>
+                 <div class="col-lg-6 col-md-6 col-sm-6 mt-3">
+                     <a href="/categories/all" class="gallery-clickable-content">
+                         <div class="gallery-container all-container">
+                             <div class="gallery-black-large-box-subcontainer px-4 py-2">
+                                 <div class="icon-container ">
+                                     <div class="icon-heading">
+                                         <h1 class="gallery-heading">All </h1>
+                                     </div>
+                                     <div class="icon-subcontainer">
+                                         <img src="images/arrow.png" alt="">
+                                     </div>
+                                 </div>
+                                 <div class="mt-1">
+                                     <p class="gallery-text">Books Available : 200+</p>
+                                 </div>
+                             </div>
+                         </div>
+                     </a>
+                 </div>
+                 <div class="col-lg-3 col-md-6 col-sm-6 mt-3">
+                     <a href="/categories/biography" class="gallery-clickable-content">
+                         <div class="gallery-container biography-container">
+                             <div class="gallery-black-small-box-subcontainer px-4 py-2">
+                                 <div class="icon-container ">
+                                     <div class="icon-heading">
+                                         <h1 class="gallery-heading">Biography </h1>
+                                     </div>
+                                     <div class="icon-subcontainer">
+                                         <img src="images/arrow.png" alt="">
+                                     </div>
+                                 </div>
+                                 <div class="mt-1">
+                                     <p class="gallery-text">Books Available : 125+</p>
+                                 </div>
+                             </div>
+                         </div>
+                     </a>
+                 </div>
+                 <div class="col-lg-3 col-md-6 col-sm-6 mt-3">
+                     <a href="/categories/arts" class="gallery-clickable-content">
+                         <div class="gallery-container art-container">
+                             <div class="gallery-black-small-box-subcontainer px-4 py-2">
+                                 <div class="icon-container ">
+                                     <div class="icon-heading">
+                                         <h1 class="gallery-heading">Arts</h1>
+                                     </div>
+                                     <div class="icon-subcontainer">
+                                         <img src="images/arrow.png" alt="">
+                                     </div>
+                                 </div>
+                                 <div class="mt-1">
+                                     <p class="gallery-text">Books Available : 230+</p>
+                                 </div>
+                             </div>
+                         </div>
+                     </a>
+                 </div>
+             </div>
+             
+             <!-- why choose us? section -->
+             <h1 class="library-heading text-center mt-5 mb-3">Why Choose Our Library?</h1>
+             <div class="row">
+                 <div class="col-lg-5 col-md-12 col-sm-12 pb-3">
+                     <img src="images/my-books.jpg" alt="" class="section3-images">
+                 </div>
+
+                 <div class="col-lg-7 col-md-12 col-sm-12 pb-3">
+                     <div class="row g-4">
+                         <div class="col-lg-6 col-md-12 col-sm-12">
+                             <div class="section-boxes">
+                                 <h1 class="library-subheading">Expertise and Knowledge</h1>
+                                 <p class="library-text">Offers a curated collection of quality books, categorized and organized for easy discovery by genre, author, or popularity.</p>
+                             </div>
+                         </div>
+                         <div class="col-lg-6 col-md-12 col-sm-12">
+                             <div class="section-boxes">
+                                 <h1 class="library-subheading">
+                                     Time and Stress Savings</h1>
+                                 <p class="library-text">
+                                     Simplifies your reading journey with smart search, filters, and personalized recommendations—no more endless browsing.
+                                 </p>
+                             </div>
+                         </div>
+                         <div class="col-lg-6 col-md-12 col-sm-12">
+                             <div class="section-boxes">
+                                 <h1 class="library-subheading">
+                                     Community and Contribution
+                                 </h1>
+                                 <p class="library-text">
+                                     Allows readers to submit books and share knowledge, while admins ensure every submission is verified and appropriate.
+                                 </p>
+                             </div>
+                         </div>
+                         <div class="col-lg-6 col-md-12 col-sm-12">
+                             <div class="section-orange-boxes">
+                                 <h1 class="library-subheading">
+                                     Access Anytime, Anywhere
+                                 </h1>
+                                 <p class="library-text">
+                                     Enjoy unlimited access to books—whether at home, school, or on the go—on any device, 24/7.
+                                 </p>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+
+             <!-- counter of books in categories -->
+             <h1 class="library-heading text-center mt-5 mb-3">Books in Our Collection</h1>
+             <div class="row justify-content-center">
+                 <div class="col-lg-2 col-md-4 col-sm-6 col-6 text-center">
+                     <h1 class="section-1-ranking-heading counter" data-target="250">0</h1>
+                     <p class="section-1-ranking-text">Fiction</p>
+                 </div>
+                 <div class="col-lg-2 col-md-4 col-sm-6 col-6 text-center">
+                     <h1 class="section-1-ranking-heading counter" data-target="145">0</h1>
+                     <p class="section-1-ranking-text">History</p>
+                 </div>
+                 <div class="col-lg-2 col-md-4 col-sm-6 col-6 text-center">
+                     <h1 class="section-1-ranking-heading counter" data-target="180">0</h1>
+                     <p class="section-1-ranking-text">Children</p>
+                 </div>
+                 <div class="col-lg-2 col-md-4 col-sm-6 col-6 text-center">
+                     <h1 class="section-1-ranking-heading counter" data-target="125">0</h1>
+                     <p class="section-1-ranking-text">Biography</p>
+                 </div>
+                 <div class="col-lg-2 col-md-4 col-sm-6 col-6 text-center">
+                     <h1 class="section-1-ranking-heading counter" data-target="230">0</h1>
+                     <p class="section-1-ranking-text">Arts</p>
+                 </div>
+             </div>
+
+             <!-- latest addition of books -->
+             <h1 class="library-heading text-center mt-5 mb-3">Latest Addition</h1>
+             <div class="row justify-content-center">
+                 <% books.forEach(book => { %>
+                     <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-5 book-card">
+                         <a href="/books/<%- book.id %>" class="gallery-clickable-content">
+                             <img src="<%- book.image %>" alt="" class="books-images">
+                             <div class="mt-2">
+                                 <h4 class="books-title"> <%- book.title %> </h4>
+                                 <p class="books-author"> <%- book.author %> <br> 
+                                  (<%- book.releasedYear %>)</p>
+                             </div>
+                         </a>
+                 </div>  
+                 <% }) %>
+             </div>
+             
+             <!-- login or signup to add books detail section -->
+             <h1 class="library-heading text-center mt-5 mb-3"> Share Your Knowledge with the World</h1>
+             <div class="row">
+                 <div class="col-lg-6 col-md-12 col-sm-12 pb-5">
+                      <img src="/images/verified-books.jpg" alt="" class="section3-images">
+                 </div>
+                 <div class="col-lg-6 col-md-12 col-sm-12 pb-5">
+                     <h1 class="library-subheading">
+                         Become a Contributor – Upload Your Books
+                     </h1>
+                     <p class="library-text">
+                        Are you an author, student, or reader with books worth sharing? Join our online library community by creating an account today. Once you log in, you can upload your own books directly to the platform. Our admin team will review and verify each submission to ensure quality and authenticity before it's published.
+                        <br>
+                        <b>It's simple:</b>
+                     </p>
+                     <br>
+                     <ul class="library-text">
+                         <li> Sign up or log in</li>
+                         <li>Upload your book</li>
+                         <li> Let our admin verify it</li>
+                         <li>See it live on the website!</li>
+                     </ul>
+                     <a href="/login" class="btn library-button">Login Now</a>
+                 </div>
+             </div>
+
+             <!-- book cover gallery -->
+             <h1 class="library-heading text-center mt-5 mb-3">Virtual Shelf</h1>
+             <!-- Gallery -->
+             <div class="row">
+                 <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                     <img
+                         src="/images/gallery1.avif" 
+                         height="250px"
+                         class="w-100 shadow-1-strong rounded-3 mb-4 gallery-images"/>
+
+                     <img
+                         src="/images/gallery2.avif"
+                         height="500px"
+                         class="w-100 shadow-1-strong rounded mb-4 gallery-images"/>
+                 </div>
+
+                 <div class="col-lg-4 mb-4 mb-lg-0">
+                     <img
+                         src="/images/gallery6.avif"
+                         height="500px"
+                         class="w-100 shadow-1-strong rounded mb-4 gallery-images"/>
+
+                     <img
+                         src="/images/gallery5.webp"
+                         height="250px"
+                         class="w-100 shadow-1-strong rounded mb-4 gallery-images"/>
+                 </div>
+
+                 <div class="col-lg-4 mb-4 mb-lg-0">
+                     <img
+                         src="/images/gallery4.jpg"
+                         height="250px"
+                         class="w-100 shadow-1-strong rounded mb-4 gallery-images"/>
+
+                     <img
+                         src="/images/gallery3.avif"
+                         height="500px"
+                         class="w-100 shadow-1-strong rounded mb-4 gallery-images"/>
+                 </div>
+             </div>
+
+             <!-- testimonials section -->
+             <h1 class="library-heading text-center mt-5 mb-3">Testimonial</h1>
+             <div class="testimonial-container">
+                 <div class="testimonial-viewport">
+                     <div class="testimonial-track" id="testimonialTrack">
+                         <div class="testimonial-box">
+                             <div class="row justify-content-center">
+                                 <div class="col-lg-2 col-md-12 col-sm-12">
+                                     <div class="outer-circle">
+                                         <div class="inner-image testimonial-inner-image1"></div>
+                                     </div>
+                                 </div>
+                                 <div class="col-lg-8 col-md-12 col-sm-12 testimonial-subcontainer">
+                                     <p class="testimonial-text">I absolutely love this online library platform! It has made accessing academic books and literature so convenient. As a student, I often struggle to find specific titles, but this site has such a wide and growing collection. What I appreciate most is the option to contribute my own materials, and the fact that every book goes through admin verification gives me confidence in the quality. The user interface is clean and easy to navigate, and I’ve already recommended it to several classmates. It’s truly a valuable resource for learners, readers, and even amateur authors like me!</p>
+                                     <h1 class="testimonial-name mt-5">Martin Luther</h1>
+                                 </div>
+                             </div>   
+                         </div>
+                         <div class="testimonial-box">
+                             <div class="row justify-content-center">
+                                 <div class="col-lg-2 col-md-12 col-sm-12">
+                                     <div class="outer-circle">
+                                         <div class="inner-image testimonial-inner-image2"></div>
+                                     </div>
+                                 </div>
+                                 <div class="col-lg-8 col-md-12 col-sm-12 testimonial-subcontainer">
+                                     <p class="testimonial-text">As a lifelong book lover, finding this online library has been a game-changer. The platform is user-friendly, and I love how easy it is to browse through various categories and discover new authors. Uploading and sharing my own collection has also been a rewarding experience. The verification process gives the site a sense of trust and quality. Whether you're looking for academic reads, classic novels, or modern titles, this library has it all. I log in regularly just to see what new books have been added. It's become an essential part of my daily routine.</p>
+                                     <h1 class="testimonial-name mt-5">Jullie Rose </h1>
+                                 </div>
+                             </div>   
+                         </div>
+                         <div class="testimonial-box">
+                             <div class="row justify-content-center">
+                                 <div class="col-lg-2 col-md-12 col-sm-12">
+                                     <div class="outer-circle">
+                                         <div class="inner-image testimonial-inner-image3"></div>
+                                     </div>
+                                 </div>
+                                 <div class="col-lg-8 col-md-12 col-sm-12 testimonial-subcontainer">
+                                     <p class="testimonial-text">This online library is one of the most useful platforms I’ve come across. I’ve uploaded several academic books for my peers and have also found textbooks that helped me study for exams. It's easy to use, visually appealing, and filled with quality content. The admin verification ensures the uploads are reliable, which I really appreciate. The ability to log in, manage my own uploads, and view feedback has made me feel like a valuable part of the platform. It's more than just a library—it’s a knowledge-sharing hub that’s helped me grow academically and personally</p>
+                                     <h1 class="testimonial-name mt-5">Rose Watson</h1>
+                                 </div>
+                             </div>   
+                         </div>
+                         <div class="testimonial-box">
+                             <div class="row justify-content-center">
+                                 <div class="col-lg-2 col-md-12 col-sm-12">
+                                     <div class="outer-circle">
+                                         <div class="inner-image testimonial-inner-image4"></div>
+                                     </div>
+                                 </div>
+                                 <div class="col-lg-8 col-md-12 col-sm-12 testimonial-subcontainer">
+                                     <p class="testimonial-text">This online library is the perfect solution for readers like me who prefer digital access. I was amazed by the variety of books available—fiction, non-fiction, educational resources—you name it. The interface is clean and intuitive, making it easy to find what I need. What I love most is that I can upload my own books and contribute to the community. Knowing that each upload is verified adds a layer of reliability. I’ve discovered so many great reads here that I wouldn’t have found elsewhere. Highly recommended for anyone who enjoys reading or sharing knowledge online</p>
+                                     <h1 class="testimonial-name mt-5">John Doe</h1>
+                                 </div>
+                             </div>   
+                         </div>
+                     </div>
+                     <div class="testimonial-indicator" id="testimonialIndicator">
+                         <button data-index="0" class="active"></button>
+                         <button data-index="1"></button>
+                         <button data-index="2"></button>
+                         <button data-index="3"></button>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </main>
+
+     <footer class="mt-5">
+         <%- include('footer') %>
+     </footer>
+     
+     <%- include('foot') %>
+</body>
+</html>
