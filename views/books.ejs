@@ -77,9 +77,9 @@
                  <div class="row mt-5">
                      <p class="library-heading">Suggested Books</p>
                      <% suggestions.forEach(suggestion => { %>
-                         <div class="col-lg-3 col-md-6 col-sm-6 col-6 mt-2">
-                             <div class="card">
-                                 <img src="<%-suggestion.image %>" class="card-img-top" height="320px" alt="">
+                         <div class="col-lg-3 col-md-6 col-sm-12 col-12 mt-2">
+                             <div class="card justify-content-center">
+                                 <img src="<%-suggestion.image %>" class="card-img-top" height="400px" alt="">
                                  <div class="card-body">
                                      <h5 class=" books-title" ><%- suggestion.title %></h5>
                                      <p class="books-author"><%- suggestion.author %></p>
